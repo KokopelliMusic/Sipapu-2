@@ -1,0 +1,42 @@
+{
+  "name": "sipapu-2",
+  "version": "1.0.0",
+  "description": "The backend for Kokopelli, rewritten to use AppWrite",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "mocha -r ts-node/register src/**/*.test.ts",
+    "publish:major": "tsc && npm version major && npm publish",
+    "publish:minor": "tsc && npm version minor && npm publish",
+    "publish:patch": "tsc && npm version patch && npm publish",
+    "lint": "npx eslint --fix --ext .js,.ts ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KokopelliMusic/Sipapu-2.git"
+  },
+  "author": "Nierot",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/KokopelliMusic/Sipapu-2/issues"
+  },
+  "homepage": "https://github.com/KokopelliMusic/Sipapu-2#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "mocha": "^10.0.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
