@@ -7,8 +7,6 @@ type Default = {
 
 export type Playlist = Default & {
   name: string
-  user_id: string
-  users: string[]
   songs: string[]
 }
 
@@ -32,7 +30,7 @@ export enum SongTypeEnum {
 export type Spotify = Default & {
   access_token: string
   refresh_token: string
-  expired_at: string
+  expires_at: string
 }
 
 export type Session = Default & {
