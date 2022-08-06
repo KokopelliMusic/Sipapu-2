@@ -12,8 +12,8 @@ export type Playlist = Default & {
 }
 
 export enum SongTypeEnum {
-  Spotify,
-  YouTube
+  Spotify = 'Spotify',
+  YouTube = 'YouTube'
 }
 
 export type Song = Default & {
