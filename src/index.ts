@@ -39,7 +39,7 @@ export type Spotify = Default & {
 export type Session = Default & {
   settings: string
   currently_playing: string
-  playlist: string
+  playlist_id: string
   user_id: string
 }
 
