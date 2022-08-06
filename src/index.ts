@@ -27,6 +27,7 @@ export type Song = Default & {
   play_count: number
   playlist_id: string
   platform_id: string
+  user_name: string
 }
 
 export type Spotify = Default & {
