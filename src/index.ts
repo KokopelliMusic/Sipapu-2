@@ -3,11 +3,17 @@ type Default = {
   '$createdAt': number
   '$updatedAt': number
   '$collection': string
+  '$read': string[]
+  '$write': string[]
 }
 
 export type Playlist = Default & {
   name: string
-  songs: string[]
+}
+
+export enum SongTypeEnum {
+  Spotify,
+  YouTube
 }
 
 export type Song = Default & {
@@ -20,11 +26,6 @@ export type Song = Default & {
   added_by: string
   play_count: number
   playlist_id: string
-}
-
-export enum SongTypeEnum {
-  Spotify,
-  YouTube
 }
 
 export type Spotify = Default & {
