@@ -41,6 +41,7 @@ export type Session = Default & {
   currently_playing: string
   playlist_id: string
   user_id: string
+  users: string[]
 }
 
 /**
