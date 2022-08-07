@@ -1,6 +1,6 @@
 {
   "name": "sipapu-2",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "The backend for Kokopelli, rewritten to use AppWrite",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
