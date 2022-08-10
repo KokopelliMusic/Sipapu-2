@@ -127,3 +127,69 @@ export const DEFAULT_SETTINGS: SessionSettings = {
 
   algorithmUsed: 'modern',
 }
+
+
+export enum EventTypeEnum {
+  Generic = 'generic',
+
+  SessionCreated = 'session-created',
+  SessionDeleted = 'session-deleted',
+  UserLeftSession = 'user-left-session',
+  UserJoinedSession = 'user-joined-session',
+
+  Skip = 'skip',
+  Play = 'play',
+  PlayPause = 'play-pause',
+  Previous = 'previous',
+
+  SpotifySongAdded = 'spotify-song-added',
+  YouTubeSongAdded = 'youtube-song-added',
+  SongRemoved = 'song-removed',
+
+  SongFinished = 'song-finished',
+  NextSong = 'next-song',
+  PlaylistFinished = 'playlist-finished',
+  NextSongIsAnEvent = 'next-song-is-an-event',
+
+  SpotifyTokenRefresh = 'spotify-token-refresh',
+  SettingsChanged = 'settings-changed',
+  
+  SpotifyPlaybackError = 'spotify-playback-error',
+  YouTubePlaybackError = 'youtube-playback-error',
+  PlaylistTooSmallError = 'playlist-too-small-error'
+}
+
+export type EventData = unknown
+
+export type SessionChangedData = EventData & {
+  previous_state: Session
+  new_state: Session
+}
+
+export type PlaybackChangedData = EventData & {
+  currently_playing: string
+  event: boolean
+  event_type?: PlayerEvents
+}
+
+export type SongChangedData = EventData & {
+  song_changed: Song
+}
+
+export type SpotifyChangedData = EventData & {
+  new_token: string
+}
+
+export type SettingsChangedData = EventData & {
+  old_settings: SessionSettings
+  new_settings: SessionSettings
+}
+
+export type PlayerErrorData = EventData & {
+  message: string
+}
+
+export type Event = Default & {
+  type: EventTypeEnum
+  payload: EventData | SessionChangedData | PlaybackChangedData | SongChangedData | SpotifyChangedData | SettingsChangedData | PlayerErrorData
+}
