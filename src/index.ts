@@ -149,7 +149,7 @@ export enum EventTypeEnum {
   SongFinished = 'song-finished',
   NextSong = 'next-song',
   PlaylistFinished = 'playlist-finished',
-  NextSongIsAnEvent = 'next-song-is-an-event',
+  PlayerEvent = 'player-event',
 
   SpotifyTokenRefresh = 'spotify-token-refresh',
   SettingsChanged = 'settings-changed',
@@ -191,5 +191,6 @@ export type PlayerErrorData = EventData & {
 
 export type Event = Default & {
   type: EventTypeEnum
+  session_id: string
   payload: EventData | SessionChangedData | PlaybackChangedData | SongChangedData | SpotifyChangedData | SettingsChangedData | PlayerErrorData
 }
