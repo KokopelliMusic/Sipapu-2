@@ -43,6 +43,7 @@ export type Session = Default & {
   playlist_id: string
   user_id: string
   users: string[]
+  player: string
 }
 
 /**
